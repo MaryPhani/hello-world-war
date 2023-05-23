@@ -10,9 +10,9 @@ pipeline {
             steps {
                 echo 'Snyk Testing...'
                 snykSecurity (
-                    projectName: 'snyk_security_tool', 
+                    projectName: 'snyk_api', 
                     snykInstallation: 'snyk@latest', 
-                    snykTokenId: 'organisation-snyk-api-token_1',
+                    snykTokenId: 'Snyk_security_tool',
                     failOnIssues: false
                     
                 )
