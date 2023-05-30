@@ -29,7 +29,7 @@ pipeline {
     }
     stage('Dockerbuild'){
            steps {
-               sh 'docker build -t mary .'
+               sh 'docker build -t mary -f /home/ubuntu/springtomcatchatapp'
       }
    }
   }
