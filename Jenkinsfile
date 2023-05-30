@@ -30,5 +30,7 @@ pipeline {
     stage('Dockerbuild'){
            steps {
                sh 'docker build -t mary -f /home/ubuntu/hello-world-war'
+      }
+   }
   }
 }
