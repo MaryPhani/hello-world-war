@@ -27,5 +27,8 @@ pipeline {
                 sh 'echo $AWS_SECRET_ACCESS_KEY'
         }
     }
+    stage('Dockerbuild'){
+           steps {
+               sh 'docker build -t mary -'
   }
 }
