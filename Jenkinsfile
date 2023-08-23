@@ -10,8 +10,7 @@ pipeline {
             echo "Hello tfytf"
         }
     }
-    stages {
-      stage('Semgrep-Scan') {
+        stage('Semgrep-Scan') {
           steps {
             sh 'pip3 install semgrep'
             sh 'semgrep ci'
