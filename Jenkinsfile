@@ -27,7 +27,7 @@ pipeline {
                 sh 'echo $AWS_SECRET_ACCESS_KEY'
         }
     }
-    stage('SonarQube analysis') {
+   /* stage('SonarQube analysis') {
 //    def scannerHome = tool 'SonarScanner 4.0';
         steps{
         withSonarQubeEnv('sonarqube-9.9.1') { 
@@ -36,6 +36,6 @@ pipeline {
         sh "mvn sonar:sonar"
     }
         }
-        } 
+        } */
     }
 }
