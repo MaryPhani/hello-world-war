@@ -13,12 +13,15 @@ pipeline {
     stage('Snyk Test') {
             steps {
                 echo 'Snyk Testing...'
-                snykSecurity (
-                    projectName: 'Snyk_security_tool', 
-                    snykInstallation: 'snyk@latest', 
-                    snykTokenId: 'snyk_api',
-                    failOnIssues: false
-                )
+                script {
+                    // Adjusted the credential ID to 'snyk_org_token'
+                    snykSecurity (
+                        projectName: 'eposhybrid23', 
+                        snykInstallation: 'snyk_security', 
+                        snykTokenId: 'SNYK-TOKEN',
+                        failOnIssues: false
+                    )
+                }
             }
         }
     stage('sample') {
